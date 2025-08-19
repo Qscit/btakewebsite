@@ -6,8 +6,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-blue-600">Btake Stay</h1>
-        
+        {/* <h1 className="text-2xl font-bold text-blue-600">Btake Stay</h1> */}
+         <img src={"/BTAKELOGO.jpg"} alt="logo" height={50} width={200}/>
         {/* Nav Links */}
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
           <li>
@@ -19,14 +19,14 @@ export default function Navbar() {
           <li>
             <Link href="/food" className="hover:text-blue-600">Food</Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/contact" className="hover:text-blue-600">Contact</Link>
-          </li>
+          </li> */}
         </ul>
 
         {/* Button */}
         <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
-          Book Now
+          Contact Now
         </button>
       </div>
     </nav>
