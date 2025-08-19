@@ -1,7 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/component/Navbar";
 import Footer from "@/component/Footer";
-import CarouselSection from "@/component/Caraosel";
+import Caraosel from "@/component/Caraosel";
+import About from "@/component/About";
+import OurService from "@/component/OurService";
+import AvailableCity from "@/component/AvailableCity";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -16,15 +19,21 @@ import CarouselSection from "@/component/Caraosel";
 export default function Home() {
   return (
     <div
-      className={` font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20`}
+      className="font-sans grid grid-rows-[auto_1fr_auto] min-h-screen p-0 overflow-x-hidden"
     >
-   <header>
-       <Navbar/>
-   </header>
-      <main>
-        <CarouselSection/>
-      </main>
-        <Footer/>
+        <Caraosel />
+        <About />
+        <OurService/>
+        <AvailableCity
+          cities={[
+            "Delhi",
+            "Mumbai",
+            "Bangalore",
+            "Hyderabad",
+            "Kolkata",
+            "Chennai",
+          ]}
+        />
     </div>
   );
 }
