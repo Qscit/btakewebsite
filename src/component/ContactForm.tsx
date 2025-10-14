@@ -69,7 +69,7 @@ export default function ContactForm() {
           <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
             Get In Touch
           </h2>
-          <p className="text-slate-600 text-sm">We'd love to hear from you. Send us a message!</p>
+          <p className="text-slate-600 text-sm">We&apos;d love to hear from you. Send us a message!</p>
         </div>
 
         {/* Form fields */}
@@ -155,7 +155,7 @@ export default function ContactForm() {
 
         {/* Footer */}
         <p className="text-center text-slate-500 text-xs relative z-10">
-          We'll get back to you within 24 hours
+         <p>We&apos;ll get back to you soon.</p>
         </p>
       </div>
     </div>
