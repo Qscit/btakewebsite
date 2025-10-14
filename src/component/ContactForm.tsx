@@ -154,9 +154,10 @@ export default function ContactForm() {
         )}
 
         {/* Footer */}
-        <p className="text-center text-slate-500 text-xs relative z-10">
-         <p>We&apos;ll get back to you soon.</p>
-        </p>
+        <div className="text-center text-slate-500 text-xs relative z-10">
+            <p>We&apos;ll get back to you soon.</p>
+        </div>
+
       </div>
     </div>
   );

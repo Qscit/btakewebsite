@@ -135,7 +135,9 @@ export default function Navbar() {
               }}
             >
               <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-3 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 w-full font-medium shadow-md hover:shadow-lg">
-                Contact Now
+                <Link  href="/ContactUs">
+                  Contact Now
+                </Link>
               </button>
             </li>
           </ul>
