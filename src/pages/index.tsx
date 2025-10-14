@@ -26,12 +26,7 @@ export default function Home() {
         <OurService/>
         <AvailableCity
           cities={[
-            "Delhi",
-            "Mumbai",
-            "Bangalore",
-            "Hyderabad",
-            "Kolkata",
-            "Chennai",
+            "Kolkata Dum Dum",
           ]}
         />
     </div>
