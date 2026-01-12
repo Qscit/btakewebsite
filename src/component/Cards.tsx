@@ -6,8 +6,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-
 import { Button } from "@/components/ui/button"
+
+const PLAY_STORE_URL =
+  "https://play.google.com/store/apps/details?id=com.btakefoodandaccomodation.btakefoodandaccomodation"
 
 type ServiceCardProps = {
   title: string
@@ -27,29 +29,43 @@ export default function ServiceCard({
   return (
     <div className="transform transition duration-300 hover:scale-105">
       <Card className="w-[350px] rounded-2xl border border-gray-200 shadow-md hover:shadow-xl transition-shadow bg-gradient-to-br from-white to-gray-50">
-        {/* Header */}
+        
         <CardHeader className="text-center space-y-2">
-          <CardTitle className="text-xl font-bold text-gray-800">{title}</CardTitle>
+          <CardTitle className="text-xl font-bold text-gray-800">
+            {title}
+          </CardTitle>
           <CardDescription className="text-gray-500">
             {description}
           </CardDescription>
         </CardHeader>
 
-        {/* Content */}
         <CardContent>
-          <p className="text-gray-700 leading-relaxed text-center">{content}</p>
+          <p className="text-gray-700 leading-relaxed text-center">
+            {content}
+          </p>
         </CardContent>
 
-        {/* Footer with actions */}
         {(primaryAction || secondaryAction) && (
           <CardFooter className="flex justify-center gap-4 pt-4">
+            
+            {/* ✅ DOWNLOAD APP REDIRECT */}
             {primaryAction && (
-              <Button className="rounded-xl shadow-sm hover:shadow-md">
-                {primaryAction}
-              </Button>
+              <a
+                href={PLAY_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="rounded-xl shadow-sm hover:shadow-md">
+                  {primaryAction}
+                </Button>
+              </a>
             )}
+
             {secondaryAction && (
-              <Button variant="outline" className="rounded-xl hover:bg-gray-100">
+              <Button
+                variant="outline"
+                className="rounded-xl shadow-sm hover:shadow-md text-white"
+              >
                 {secondaryAction}
               </Button>
             )}
