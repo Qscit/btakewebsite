@@ -41,31 +41,9 @@ const COLORS = ["#00C49F", "#FF8042"];
 export default function Dashboard() {
   return (
     <div style={{ padding: 60 }}>
-      
-      {/* Top Cards */}
-      {/* <div style={{ display: "flex", gap: 20, marginBottom: 20 }}>
-        <Card title="Total Tenants" value="120" />
-        <Card title="Total Rooms" value="45" />
-        <Card title="Revenue" value="₹2,40,000" />
-        <Card title="Pending Payment" value="₹40,000" />
-      </div> */}
-
-      {/* Charts */}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
         
-        {/* Booking Chart */}
-        {/* <ChartCard title="Monthly Bookings">
-          <ResponsiveContainer width="100%" height={300}>
-            <LineChart data={bookingData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="month" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Line type="monotone" dataKey="bookings" stroke="#8884d8" />
-            </LineChart>
-          </ResponsiveContainer>
-        </ChartCard> */}
+       
 
         {/* Room Occupancy */}
         <ChartCard title="Room Occupancy">

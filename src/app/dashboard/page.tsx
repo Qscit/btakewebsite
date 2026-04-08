@@ -33,7 +33,7 @@ export default function AdminDashboard() {
 
   return (
     <ProtectedRoute>
-      <div className="flex justify-evenly mt-30">
+      {/* <div className="flex justify-evenly mt-30">
         <DetailsCountCard
           title="Total Booking"
           count={data?.totalBooking || 0}
@@ -53,8 +53,13 @@ export default function AdminDashboard() {
           title="Pending Payment"
           count={data?.pendingPayment || 0}
         />
-      </div>
-
+      </div> */}
+<div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4 xl:gap-5">
+  <DetailsCountCard title="Total Bookings" count={1240} icon="📅" trend="up" />
+  <DetailsCountCard title="Total Rooms"   count={87}   icon="🛏️" />
+  <DetailsCountCard title="Revenue Today"   count={312}  icon="👥" trend="neutral" />
+  <DetailsCountCard title="Pending"  count={12}   icon="❌" trend="down" />
+</div>
       {/* <div className="flex items-stretch gap-5 mt-8 px-5 w-full"> */}
   
   {/* <div className="flex-1 min-w-0 flex flex-col"> */}

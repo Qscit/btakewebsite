@@ -16,19 +16,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen flex flex-col">
-         <ReduxProvider>
-        {/* Navbar */}
-        <Navbar />
+        <ReduxProvider>
+          <Navbar />
 
-        {/* Page Content */}
-        <main className="flex-1">
-          {children}
-        </main>
+          <main className="flex-1 pt-[92px]">
+            {children}
+          </main>
 
-        {/* Footer */}
-        <Footer />
+          <Footer />
         </ReduxProvider>
-
       </body>
     </html>
   );
