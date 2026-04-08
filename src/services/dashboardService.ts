@@ -1,6 +1,7 @@
 import { Dashboard } from "@/model/dashboard/dashboard.model";
 import axiosClient from "./axiosClient";
 import { BookingTenant } from "@/model/dashboard/bookingtenent.model";
+import { PaginatedResponse } from "@/model/paginationResponse.model";
 
 export const getDashboardSnapshot = async (): Promise<Dashboard> => {   // ← ADD TYPE
   const response = await axiosClient.get(
