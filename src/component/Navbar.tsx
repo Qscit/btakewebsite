@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -37,8 +38,8 @@ export default function Navbar() {
         <ul className="hidden md:flex space-x-1 text-gray-700 font-medium">
           {[
             { href: "/", label: "Home" },
-            { href: "/AboutUs", label: "About us" },
-            { href: "/Services", label: "Services" },
+            { href: "/aboutus", label: "About us" },
+            { href: "/service", label: "Services" },
           ].map((item) => (
             <li key={item.href}>
               <Link
@@ -55,7 +56,7 @@ export default function Navbar() {
         {/* Contact Button with gradient */}
         <div className="hidden md:block">
           <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2.5 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-md hover:shadow-xl transform hover:-translate-y-0.5 font-medium">
-           <Link  href="/ContactUs">
+           <Link  href="/contactus">
             Contact Now
            
            </Link>
