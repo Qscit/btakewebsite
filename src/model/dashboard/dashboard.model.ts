@@ -1,5 +1,6 @@
 export interface RoomOccupancy {
   roomType: string;
+  roomName: string;
   totalBeds: number;
   occupied: number;
   available: number;

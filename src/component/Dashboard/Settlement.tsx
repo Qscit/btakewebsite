@@ -46,7 +46,7 @@ const currency = (v: number) =>
 
 const shortCurrency = (v: number) =>
   v >= 100000 ? `₹${(v / 100000).toFixed(1)}L`
-  : v >= 1000  ? `₹${(v / 1000).toFixed(0)}k`
+  : v >= 1000  ? `₹${v.toLocaleString('en-IN')}`  // exact number with comma
   : `₹${v}`;
 
 type ChartView = "pie" | "bar";
@@ -125,11 +125,12 @@ const SettlementChart = () => {
       { amount: 0, fees: 0, tax: 0, net: 0 }
     ), [chartData]
   );
-
+console.log('Original totals:', totals);
   const pieData = PIE_KEYS
     .map((k) => ({ name: k.label, value: totals[k.key as keyof typeof totals], color: k.color }))
     .filter((d) => d.value > 0);
 
+console.log('Mapped pieData:', pieData);
   const monthLabel = MONTHS.find((m) => m.value === selectedMonth)?.label ?? "";
 
   // ── Fix 1: avoid activeIndex/activeShape prop on <Pie> ─────────────────
