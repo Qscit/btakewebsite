@@ -46,7 +46,7 @@ const currency = (v: number) =>
 
 const shortCurrency = (v: number) =>
   v >= 100000 ? `₹${(v / 100000).toFixed(1)}L`
-  : v >= 1000  ? `₹${v.toLocaleString('en-IN')}`  // exact number with comma
+  : v >= 1000  ? `₹${v.toLocaleString('en-IN')}`  
   : `₹${v}`;
 
 type ChartView = "pie" | "bar";
