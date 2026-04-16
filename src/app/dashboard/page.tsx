@@ -53,7 +53,7 @@ export default function AdminDashboard() {
         </div>
 
         {/* ── Stat cards ── */}
-        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4 xl:gap-5">
+        {/* <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4 xl:gap-5">
           <DetailsCountCard
             title="Total Bookings"
             count={data?.totalBooking ?? 1240}
@@ -78,7 +78,7 @@ export default function AdminDashboard() {
             icon="⏳"
             trend="down"
           />
-        </div>
+        </div> */}
 
         {/* ── Charts ── */}
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
